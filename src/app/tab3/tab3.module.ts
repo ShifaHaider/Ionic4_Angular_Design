@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Tab3Page } from './tab3.page';
+import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
+
 
 @NgModule({
   imports: [
@@ -12,6 +14,9 @@ import { Tab3Page } from './tab3.page';
     FormsModule,
     RouterModule.forChild([{ path: '', component: Tab3Page }])
   ],
-  declarations: [Tab3Page]
+  declarations: [Tab3Page],
+  providers:[Camera],
+
+
 })
 export class Tab3PageModule {}

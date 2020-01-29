@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-title>
       Tab Two
@@ -6,4 +6,61 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content></ion-content> -->
+  <ion-header>
+<ion-toolbar color= "danger">
+  <ion-buttons slot="start">
+    <ion-menu-button autoHide="false"></ion-menu-button>
+  </ion-buttons>
+  <ion-buttons slot="secondary">
+    <ion-icon slot="icon-only" name="search"></ion-icon>
+  </ion-buttons>
+  <ion-title>My App</ion-title>
+</ion-toolbar>
+</ion-header>
+<ion-menu side="start" menuId="custom" class="my-custom-menu">
+  <ion-content>
+    <div style="text-align: center; margin-top: 10px;" id="imageDiv">
+    <img style ="width: 110px; height: 110px; border-radius: 50%;" src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"/>
+    </div>
+    <ion-list>
+      <ion-item (click)="buttonClick()">
+        <ion-icon slot="start" name="water"></ion-icon>
+        <ion-label>My Orders</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="person"></ion-icon>
+        <ion-label>profile</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="football"></ion-icon>
+        <ion-label>Collection</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="checkbox"></ion-icon>
+        <ion-label>My Orders</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="checkbox"></ion-icon>
+        <ion-label>My profile</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+
+<ion-router-outlet main></ion-router-outlet>
+<ion-content>
+  <ion-card *ngFor="let v of items;let i = index">
+  <img src="{{v.picture}}" height="200px">
+    <ion-card-header>
+      <ion-card-title>{{v.title}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile,
+      and climb a mountain or spend a week in the woods. 
+    </ion-card-content>
+  </ion-card>
+  
+  
+</ion-content>
